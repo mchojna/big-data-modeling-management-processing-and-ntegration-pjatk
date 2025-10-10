@@ -1,0 +1,3 @@
+Ala ma kota. Kot ma Ale.
+Ala lubi Spark i Airflow!
+Docker, Spark, Airflow — lubię to.

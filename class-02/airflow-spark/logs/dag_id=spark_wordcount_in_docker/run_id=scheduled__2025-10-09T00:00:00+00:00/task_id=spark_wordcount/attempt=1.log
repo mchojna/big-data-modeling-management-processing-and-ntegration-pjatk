@@ -1,0 +1,286 @@
+[2025-10-10T18:24:21.804+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-10-10T18:24:21.817+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spark_wordcount_in_docker.spark_wordcount scheduled__2025-10-09T00:00:00+00:00 [queued]>
+[2025-10-10T18:24:21.824+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spark_wordcount_in_docker.spark_wordcount scheduled__2025-10-09T00:00:00+00:00 [queued]>
+[2025-10-10T18:24:21.826+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-10-10T18:24:21.834+0000] {taskinstance.py:2888} INFO - Executing <Task(DockerOperator): spark_wordcount> on 2025-10-09 00:00:00+00:00
+[2025-10-10T18:24:21.837+0000] {standard_task_runner.py:72} INFO - Started process 185 to run task
+[2025-10-10T18:24:21.839+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'spark_wordcount_in_docker', 'spark_wordcount', 'scheduled__2025-10-09T00:00:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/spark_dag.py', '--cfg-path', '/tmp/tmpvl19bc9b']
+[2025-10-10T18:24:21.841+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask spark_wordcount
+[2025-10-10T18:24:21.872+0000] {task_command.py:467} INFO - Running <TaskInstance: spark_wordcount_in_docker.spark_wordcount scheduled__2025-10-09T00:00:00+00:00 [running]> on host d5e286fcaf27
+[2025-10-10T18:24:21.916+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='spark_wordcount_in_docker' AIRFLOW_CTX_TASK_ID='spark_wordcount' AIRFLOW_CTX_EXECUTION_DATE='2025-10-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-10-09T00:00:00+00:00'
+[2025-10-10T18:24:21.917+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-10-10T18:24:21.951+0000] {docker.py:478} INFO - ::group::Pulling docker image apache/spark:3.5.1-python3
+[2025-10-10T18:24:23.720+0000] {docker.py:492} INFO - 3.5.1-python3: Pulling from apache/spark
+[2025-10-10T18:24:24.778+0000] {docker.py:492} INFO - 283680aff774: Pulling fs layer
+[2025-10-10T18:24:24.778+0000] {docker.py:492} INFO - aa774d25e71a: Pulling fs layer
+[2025-10-10T18:24:24.779+0000] {docker.py:492} INFO - d010a5c46c32: Pulling fs layer
+[2025-10-10T18:24:24.779+0000] {docker.py:492} INFO - 2ff284d81784: Pulling fs layer
+[2025-10-10T18:24:24.780+0000] {docker.py:492} INFO - ef524e9bbd62: Pulling fs layer
+[2025-10-10T18:24:24.780+0000] {docker.py:492} INFO - 4f4fb700ef54: Pulling fs layer
+[2025-10-10T18:24:24.780+0000] {docker.py:492} INFO - cb4593119e5e: Pulling fs layer
+[2025-10-10T18:24:24.781+0000] {docker.py:492} INFO - 40919bbffbaa: Pulling fs layer
+[2025-10-10T18:24:24.782+0000] {docker.py:492} INFO - 343774c85c6b: Pulling fs layer
+[2025-10-10T18:24:24.782+0000] {docker.py:492} INFO - beb9e0b551f1: Pulling fs layer
+[2025-10-10T18:24:24.783+0000] {docker.py:492} INFO - 578d2b1c206e: Pulling fs layer
+[2025-10-10T18:24:24.858+0000] {docker.py:492} INFO - 4f4fb700ef54: Already exists
+[2025-10-10T18:24:25.060+0000] {docker.py:492} INFO - 2ff284d81784: Downloading
+[2025-10-10T18:24:25.261+0000] {docker.py:492} INFO - 283680aff774: Downloading
+[2025-10-10T18:24:25.558+0000] {docker.py:492} INFO - ef524e9bbd62: Downloading
+[2025-10-10T18:24:25.659+0000] {docker.py:492} INFO - 578d2b1c206e: Downloading
+[2025-10-10T18:24:25.660+0000] {docker.py:492} INFO - 343774c85c6b: Downloading
+[2025-10-10T18:24:25.759+0000] {docker.py:492} INFO - cb4593119e5e: Downloading
+[2025-10-10T18:24:25.760+0000] {docker.py:492} INFO - beb9e0b551f1: Downloading
+[2025-10-10T18:24:25.958+0000] {docker.py:492} INFO - aa774d25e71a: Downloading
+[2025-10-10T18:24:25.958+0000] {docker.py:492} INFO - d010a5c46c32: Downloading
+[2025-10-10T18:24:25.958+0000] {docker.py:492} INFO - 40919bbffbaa: Downloading
+[2025-10-10T18:24:29.463+0000] {docker.py:492} INFO - 2ff284d81784: Download complete
+[2025-10-10T18:24:30.159+0000] {docker.py:492} INFO - ef524e9bbd62: Download complete
+[2025-10-10T18:24:30.658+0000] {docker.py:492} INFO - 578d2b1c206e: Download complete
+[2025-10-10T18:24:30.659+0000] {docker.py:492} INFO - 343774c85c6b: Download complete
+[2025-10-10T18:24:31.558+0000] {docker.py:492} INFO - beb9e0b551f1: Download complete
+[2025-10-10T18:24:31.560+0000] {docker.py:492} INFO - 40919bbffbaa: Download complete
+[2025-10-10T18:24:31.560+0000] {docker.py:492} INFO - cb4593119e5e: Download complete
+[2025-10-10T18:24:31.561+0000] {docker.py:492} INFO - aa774d25e71a: Download complete
+[2025-10-10T18:24:31.564+0000] {docker.py:492} INFO - beb9e0b551f1: Extracting
+[2025-10-10T18:24:32.759+0000] {docker.py:492} INFO - 283680aff774: Download complete
+[2025-10-10T18:24:33.260+0000] {docker.py:492} INFO - d010a5c46c32: Download complete
+[2025-10-10T18:24:33.269+0000] {docker.py:492} INFO - beb9e0b551f1: Pull complete
+[2025-10-10T18:24:33.276+0000] {docker.py:492} INFO - aa774d25e71a: Extracting
+[2025-10-10T18:24:33.770+0000] {docker.py:492} INFO - cb4593119e5e: Extracting
+[2025-10-10T18:24:33.772+0000] {docker.py:492} INFO - aa774d25e71a: Pull complete
+[2025-10-10T18:24:34.464+0000] {docker.py:492} INFO - ef524e9bbd62: Pull complete
+[2025-10-10T18:24:34.465+0000] {docker.py:492} INFO - 578d2b1c206e: Pull complete
+[2025-10-10T18:24:34.468+0000] {docker.py:492} INFO - 343774c85c6b: Pull complete
+[2025-10-10T18:24:34.469+0000] {docker.py:492} INFO - 40919bbffbaa: Extracting
+[2025-10-10T18:24:34.471+0000] {docker.py:492} INFO - cb4593119e5e: Pull complete
+[2025-10-10T18:24:34.764+0000] {docker.py:492} INFO - 40919bbffbaa: Pull complete
+[2025-10-10T18:24:34.766+0000] {docker.py:492} INFO - d010a5c46c32: Extracting
+[2025-10-10T18:24:36.758+0000] {docker.py:492} INFO - 4f4fb700ef54: Pull complete
+[2025-10-10T18:24:36.760+0000] {docker.py:492} INFO - 2ff284d81784: Pull complete
+[2025-10-10T18:24:36.765+0000] {docker.py:492} INFO - 283680aff774: Extracting
+[2025-10-10T18:24:36.768+0000] {docker.py:492} INFO - d010a5c46c32: Pull complete
+[2025-10-10T18:24:38.459+0000] {docker.py:492} INFO - 283680aff774: Pull complete
+[2025-10-10T18:24:38.460+0000] {docker.py:487} INFO - Digest: sha256:b49e3b73ce385c1693cc3294ec4b5b3882e9fa9bd5fc599d4c79198abc49cc94
+[2025-10-10T18:24:38.460+0000] {docker.py:487} INFO - Status: Downloaded newer image for apache/spark:3.5.1-python3
+[2025-10-10T18:24:38.461+0000] {docker.py:494} INFO - ::endgroup::
+[2025-10-10T18:24:38.461+0000] {docker.py:355} INFO - Starting docker container from image apache/spark:3.5.1-python3
+[2025-10-10T18:24:38.469+0000] {docker.py:363} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2025-10-10T18:24:40.521+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SparkContext: Running Spark version 3.5.1
+[2025-10-10T18:24:40.521+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SparkContext: OS info Linux, 6.10.14-linuxkit, aarch64
+[2025-10-10T18:24:40.522+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SparkContext: Java version 11.0.22
+[2025-10-10T18:24:40.564+0000] {docker.py:66} INFO - 25/10/10 18:24:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-10-10T18:24:40.642+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO ResourceUtils: ==============================================================
+[2025-10-10T18:24:40.642+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-10-10T18:24:40.643+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO ResourceUtils: ==============================================================
+[2025-10-10T18:24:40.643+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SparkContext: Submitted application: WordCount
+[2025-10-10T18:24:40.659+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-10-10T18:24:40.665+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO ResourceProfile: Limiting resource is cpu
+[2025-10-10T18:24:40.665+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-10-10T18:24:40.709+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SecurityManager: Changing view acls to: spark
+[2025-10-10T18:24:40.710+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SecurityManager: Changing modify acls to: spark
+[2025-10-10T18:24:40.710+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SecurityManager: Changing view acls groups to:
+[2025-10-10T18:24:40.710+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SecurityManager: Changing modify acls groups to:
+[2025-10-10T18:24:40.711+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+[2025-10-10T18:24:40.903+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO Utils: Successfully started service 'sparkDriver' on port 37051.
+[2025-10-10T18:24:40.928+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SparkEnv: Registering MapOutputTracker
+[2025-10-10T18:24:40.961+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SparkEnv: Registering BlockManagerMaster
+[2025-10-10T18:24:40.977+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-10-10T18:24:40.978+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-10-10T18:24:40.981+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-10-10T18:24:41.000+0000] {docker.py:66} INFO - 25/10/10 18:24:40 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1fa54315-8462-45bb-a6b1-4059eccc5303
+[2025-10-10T18:24:41.011+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-10-10T18:24:41.028+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-10-10T18:24:41.170+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2025-10-10T18:24:41.232+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-10-10T18:24:41.326+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO Executor: Starting executor ID driver on host 4134658fdba5
+[2025-10-10T18:24:41.329+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO Executor: OS info Linux, 6.10.14-linuxkit, aarch64
+[2025-10-10T18:24:41.330+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO Executor: Java version 11.0.22
+[2025-10-10T18:24:41.342+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2025-10-10T18:24:41.343+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@38b56165 for default.
+[2025-10-10T18:24:41.362+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44961.
+[2025-10-10T18:24:41.362+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO NettyBlockTransferService: Server created on 4134658fdba5:44961
+[2025-10-10T18:24:41.364+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-10-10T18:24:41.370+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 4134658fdba5, 44961, None)
+[2025-10-10T18:24:41.372+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO BlockManagerMasterEndpoint: Registering block manager 4134658fdba5:44961 with 434.4 MiB RAM, BlockManagerId(driver, 4134658fdba5, 44961, None)
+[2025-10-10T18:24:41.375+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 4134658fdba5, 44961, None)
+[2025-10-10T18:24:41.376+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 4134658fdba5, 44961, None)
+[2025-10-10T18:24:41.947+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 221.5 KiB, free 434.2 MiB)
+[2025-10-10T18:24:41.988+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.6 KiB, free 434.2 MiB)
+[2025-10-10T18:24:41.989+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 4134658fdba5:44961 (size: 32.6 KiB, free: 434.4 MiB)
+[2025-10-10T18:24:41.993+0000] {docker.py:66} INFO - 25/10/10 18:24:41 INFO SparkContext: Created broadcast 0 from textFile at <unknown>:0
+[2025-10-10T18:24:42.086+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO FileInputFormat: Total input files to process : 1
+[2025-10-10T18:24:42.167+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO SparkContext: Starting job: sortBy at /app/wordcount.py:26
+[2025-10-10T18:24:42.183+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO DAGScheduler: Registering RDD 3 (reduceByKey at /app/wordcount.py:26) as input to shuffle 0
+[2025-10-10T18:24:42.189+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO DAGScheduler: Got job 0 (sortBy at /app/wordcount.py:26) with 2 output partitions
+[2025-10-10T18:24:42.190+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO DAGScheduler: Final stage: ResultStage 1 (sortBy at /app/wordcount.py:26)
+[2025-10-10T18:24:42.190+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+[2025-10-10T18:24:42.191+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+[2025-10-10T18:24:42.199+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO DAGScheduler: Submitting ShuffleMapStage 0 (PairwiseRDD[3] at reduceByKey at /app/wordcount.py:26), which has no missing parents
+[2025-10-10T18:24:42.248+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 12.6 KiB, free 434.1 MiB)
+[2025-10-10T18:24:42.250+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.6 KiB, free 434.1 MiB)
+[2025-10-10T18:24:42.252+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 4134658fdba5:44961 (size: 7.6 KiB, free: 434.4 MiB)
+[2025-10-10T18:24:42.253+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+[2025-10-10T18:24:42.263+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (PairwiseRDD[3] at reduceByKey at /app/wordcount.py:26) (first 15 tasks are for partitions Vector(0, 1))
+[2025-10-10T18:24:42.265+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+[2025-10-10T18:24:42.300+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (4134658fdba5, executor driver, partition 0, PROCESS_LOCAL, 7644 bytes)
+[2025-10-10T18:24:42.306+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (4134658fdba5, executor driver, partition 1, PROCESS_LOCAL, 7644 bytes)
+[2025-10-10T18:24:42.317+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+[2025-10-10T18:24:42.318+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+[2025-10-10T18:24:42.370+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO HadoopRDD: Input split: file:/app/data/input.txt:44+45
+[2025-10-10T18:24:42.370+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO HadoopRDD: Input split: file:/app/data/input.txt:0+44
+[2025-10-10T18:24:42.741+0000] {docker.py:66} INFO - [Stage 0:>                                                          (0 + 2) / 2]
+[2025-10-10T18:24:42.958+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO PythonRunner: Times: total = 351, boot = 302, init = 49, finish = 0
+[2025-10-10T18:24:42.961+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO PythonRunner: Times: total = 350, boot = 298, init = 52, finish = 0
+[2025-10-10T18:24:42.987+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1667 bytes result sent to driver
+[2025-10-10T18:24:42.988+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1667 bytes result sent to driver
+[2025-10-10T18:24:42.996+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 706 ms on 4134658fdba5 (executor driver) (1/2)
+[2025-10-10T18:24:42.997+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 691 ms on 4134658fdba5 (executor driver) (2/2)
+[2025-10-10T18:24:42.998+0000] {docker.py:66} INFO - 25/10/10 18:24:42 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2025-10-10T18:24:43.010+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 34613
+[2025-10-10T18:24:43.014+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: ShuffleMapStage 0 (reduceByKey at /app/wordcount.py:26) finished in 0.799 s
+[2025-10-10T18:24:43.015+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: looking for newly runnable stages
+[2025-10-10T18:24:43.017+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: running: Set()
+[2025-10-10T18:24:43.018+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: waiting: Set(ResultStage 1)
+[2025-10-10T18:24:43.021+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: failed: Set()
+[2025-10-10T18:24:43.025+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[6] at sortBy at /app/wordcount.py:26), which has no missing parents
+[2025-10-10T18:24:43.034+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 11.8 KiB, free 434.1 MiB)
+[2025-10-10T18:24:43.037+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 6.7 KiB, free 434.1 MiB)
+[2025-10-10T18:24:43.037+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 4134658fdba5:44961 (size: 6.7 KiB, free: 434.4 MiB)
+[2025-10-10T18:24:43.040+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1585
+[2025-10-10T18:24:43.041+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (PythonRDD[6] at sortBy at /app/wordcount.py:26) (first 15 tasks are for partitions Vector(0, 1))
+[2025-10-10T18:24:43.042+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+[2025-10-10T18:24:43.048+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2) (4134658fdba5, executor driver, partition 0, NODE_LOCAL, 7433 bytes)
+[2025-10-10T18:24:43.049+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3) (4134658fdba5, executor driver, partition 1, NODE_LOCAL, 7433 bytes)
+[2025-10-10T18:24:43.052+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+[2025-10-10T18:24:43.054+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+[2025-10-10T18:24:43.122+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Getting 2 (226.0 B) non-empty blocks including 2 (226.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2025-10-10T18:24:43.125+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 13 ms
+[2025-10-10T18:24:43.126+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Getting 2 (194.0 B) non-empty blocks including 2 (194.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2025-10-10T18:24:43.126+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 13 ms
+[2025-10-10T18:24:43.178+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 42, boot = -347, init = 389, finish = 0
+[2025-10-10T18:24:43.179+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 43, boot = -347, init = 390, finish = 0
+[2025-10-10T18:24:43.179+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 2054 bytes result sent to driver
+[2025-10-10T18:24:43.179+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 2054 bytes result sent to driver
+[2025-10-10T18:24:43.181+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 136 ms on 4134658fdba5 (executor driver) (1/2)
+[2025-10-10T18:24:43.183+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 133 ms on 4134658fdba5 (executor driver) (2/2)
+[2025-10-10T18:24:43.183+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2025-10-10T18:24:43.183+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: ResultStage 1 (sortBy at /app/wordcount.py:26) finished in 0.153 s
+[2025-10-10T18:24:43.186+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-10-10T18:24:43.186+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+[2025-10-10T18:24:43.190+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Job 0 finished: sortBy at /app/wordcount.py:26, took 1.022283 s
+[2025-10-10T18:24:43.192+0000] {docker.py:66} INFO - 
+[2025-10-10T18:24:43.214+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkContext: Starting job: sortBy at /app/wordcount.py:26
+[2025-10-10T18:24:43.215+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Got job 1 (sortBy at /app/wordcount.py:26) with 2 output partitions
+[2025-10-10T18:24:43.215+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Final stage: ResultStage 3 (sortBy at /app/wordcount.py:26)
+[2025-10-10T18:24:43.216+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+[2025-10-10T18:24:43.216+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Missing parents: List()
+[2025-10-10T18:24:43.218+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Submitting ResultStage 3 (PythonRDD[7] at sortBy at /app/wordcount.py:26), which has no missing parents
+[2025-10-10T18:24:43.221+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 11.1 KiB, free 434.1 MiB)
+[2025-10-10T18:24:43.226+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 6.5 KiB, free 434.1 MiB)
+[2025-10-10T18:24:43.226+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 4134658fdba5:44961 (size: 6.5 KiB, free: 434.3 MiB)
+[2025-10-10T18:24:43.226+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+[2025-10-10T18:24:43.227+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 3 (PythonRDD[7] at sortBy at /app/wordcount.py:26) (first 15 tasks are for partitions Vector(0, 1))
+[2025-10-10T18:24:43.227+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks resource profile 0
+[2025-10-10T18:24:43.229+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 4) (4134658fdba5, executor driver, partition 0, NODE_LOCAL, 7433 bytes)
+[2025-10-10T18:24:43.229+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 5) (4134658fdba5, executor driver, partition 1, NODE_LOCAL, 7433 bytes)
+[2025-10-10T18:24:43.229+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Running task 1.0 in stage 3.0 (TID 5)
+[2025-10-10T18:24:43.229+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Running task 0.0 in stage 3.0 (TID 4)
+[2025-10-10T18:24:43.249+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Getting 2 (226.0 B) non-empty blocks including 2 (226.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2025-10-10T18:24:43.249+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+[2025-10-10T18:24:43.250+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Getting 2 (194.0 B) non-empty blocks including 2 (194.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2025-10-10T18:24:43.250+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+[2025-10-10T18:24:43.293+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 45, boot = -66, init = 111, finish = 0
+[2025-10-10T18:24:43.299+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Finished task 1.0 in stage 3.0 (TID 5). 2283 bytes result sent to driver
+[2025-10-10T18:24:43.302+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 52, boot = -70, init = 120, finish = 2
+[2025-10-10T18:24:43.306+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 5) in 76 ms on 4134658fdba5 (executor driver) (1/2)
+[2025-10-10T18:24:43.310+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Finished task 0.0 in stage 3.0 (TID 4). 2204 bytes result sent to driver
+[2025-10-10T18:24:43.312+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 4) in 83 ms on 4134658fdba5 (executor driver) (2/2)
+[2025-10-10T18:24:43.312+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+[2025-10-10T18:24:43.314+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: ResultStage 3 (sortBy at /app/wordcount.py:26) finished in 0.093 s
+[2025-10-10T18:24:43.314+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-10-10T18:24:43.315+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+[2025-10-10T18:24:43.315+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Job 1 finished: sortBy at /app/wordcount.py:26, took 0.100141 s
+[2025-10-10T18:24:43.356+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+[2025-10-10T18:24:43.360+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+[2025-10-10T18:24:43.362+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2025-10-10T18:24:43.362+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2025-10-10T18:24:43.404+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkContext: Starting job: runJob at SparkHadoopWriter.scala:83
+[2025-10-10T18:24:43.406+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Registering RDD 9 (sortBy at /app/wordcount.py:26) as input to shuffle 1
+[2025-10-10T18:24:43.407+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Got job 2 (runJob at SparkHadoopWriter.scala:83) with 1 output partitions
+[2025-10-10T18:24:43.408+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Final stage: ResultStage 6 (runJob at SparkHadoopWriter.scala:83)
+[2025-10-10T18:24:43.409+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+[2025-10-10T18:24:43.411+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 5)
+[2025-10-10T18:24:43.417+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Submitting ShuffleMapStage 5 (PairwiseRDD[9] at sortBy at /app/wordcount.py:26), which has no missing parents
+[2025-10-10T18:24:43.420+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 12.0 KiB, free 434.1 MiB)
+[2025-10-10T18:24:43.424+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 7.3 KiB, free 434.1 MiB)
+[2025-10-10T18:24:43.425+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 4134658fdba5:44961 (size: 7.3 KiB, free: 434.3 MiB)
+[2025-10-10T18:24:43.427+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1585
+[2025-10-10T18:24:43.427+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 5 (PairwiseRDD[9] at sortBy at /app/wordcount.py:26) (first 15 tasks are for partitions Vector(0, 1))
+[2025-10-10T18:24:43.428+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Adding task set 5.0 with 2 tasks resource profile 0
+[2025-10-10T18:24:43.430+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 6) (4134658fdba5, executor driver, partition 0, NODE_LOCAL, 7422 bytes)
+[2025-10-10T18:24:43.430+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 7) (4134658fdba5, executor driver, partition 1, NODE_LOCAL, 7422 bytes)
+[2025-10-10T18:24:43.431+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Running task 0.0 in stage 5.0 (TID 6)
+[2025-10-10T18:24:43.431+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Running task 1.0 in stage 5.0 (TID 7)
+[2025-10-10T18:24:43.450+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Getting 2 (226.0 B) non-empty blocks including 2 (226.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2025-10-10T18:24:43.450+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Getting 2 (194.0 B) non-empty blocks including 2 (194.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2025-10-10T18:24:43.450+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+[2025-10-10T18:24:43.450+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+[2025-10-10T18:24:43.509+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 45, boot = -141, init = 186, finish = 0
+[2025-10-10T18:24:43.510+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 43, boot = -145, init = 188, finish = 0
+[2025-10-10T18:24:43.515+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Finished task 0.0 in stage 5.0 (TID 6). 2226 bytes result sent to driver
+[2025-10-10T18:24:43.516+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Finished task 1.0 in stage 5.0 (TID 7). 2226 bytes result sent to driver
+[2025-10-10T18:24:43.519+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 7) in 88 ms on 4134658fdba5 (executor driver) (1/2)
+[2025-10-10T18:24:43.519+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 6) in 91 ms on 4134658fdba5 (executor driver) (2/2)
+[2025-10-10T18:24:43.521+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool
+[2025-10-10T18:24:43.526+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: ShuffleMapStage 5 (sortBy at /app/wordcount.py:26) finished in 0.106 s
+[2025-10-10T18:24:43.526+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: looking for newly runnable stages
+[2025-10-10T18:24:43.526+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: running: Set()
+[2025-10-10T18:24:43.526+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: waiting: Set(ResultStage 6)
+[2025-10-10T18:24:43.527+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: failed: Set()
+[2025-10-10T18:24:43.527+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[16] at saveAsTextFile at <unknown>:0), which has no missing parents
+[2025-10-10T18:24:43.539+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 109.1 KiB, free 434.0 MiB)
+[2025-10-10T18:24:43.541+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 41.0 KiB, free 433.9 MiB)
+[2025-10-10T18:24:43.542+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 4134658fdba5:44961 (size: 41.0 KiB, free: 434.3 MiB)
+[2025-10-10T18:24:43.543+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1585
+[2025-10-10T18:24:43.544+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[16] at saveAsTextFile at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+[2025-10-10T18:24:43.544+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks resource profile 0
+[2025-10-10T18:24:43.549+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 8) (4134658fdba5, executor driver, partition 0, NODE_LOCAL, 7727 bytes)
+[2025-10-10T18:24:43.549+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Running task 0.0 in stage 6.0 (TID 8)
+[2025-10-10T18:24:43.586+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+[2025-10-10T18:24:43.586+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[2025-10-10T18:24:43.587+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2025-10-10T18:24:43.589+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Getting 2 (258.0 B) non-empty blocks including 2 (258.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2025-10-10T18:24:43.589+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+[2025-10-10T18:24:43.631+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 43, boot = -86, init = 129, finish = 0
+[2025-10-10T18:24:43.633+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Getting 2 (217.0 B) non-empty blocks including 2 (217.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+[2025-10-10T18:24:43.634+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+[2025-10-10T18:24:43.677+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 42, boot = 1, init = 41, finish = 0
+[2025-10-10T18:24:43.678+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO PythonRunner: Times: total = 97, boot = -73, init = 170, finish = 0
+[2025-10-10T18:24:43.690+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO FileOutputCommitter: Saved output of task 'attempt_20251010182443794383710575386220_0016_m_000000_0' to file:/app/data/out/_temporary/0/task_20251010182443794383710575386220_0016_m_000000
+[2025-10-10T18:24:43.696+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkHadoopMapRedUtil: attempt_20251010182443794383710575386220_0016_m_000000_0: Committed. Elapsed time: 2 ms.
+[2025-10-10T18:24:43.706+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO Executor: Finished task 0.0 in stage 6.0 (TID 8). 2394 bytes result sent to driver
+[2025-10-10T18:24:43.717+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 8) in 169 ms on 4134658fdba5 (executor driver) (1/1)
+[2025-10-10T18:24:43.719+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool
+[2025-10-10T18:24:43.722+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: ResultStage 6 (runJob at SparkHadoopWriter.scala:83) finished in 0.192 s
+[2025-10-10T18:24:43.725+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+[2025-10-10T18:24:43.728+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+[2025-10-10T18:24:43.730+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO DAGScheduler: Job 2 finished: runJob at SparkHadoopWriter.scala:83, took 0.323689 s
+[2025-10-10T18:24:43.737+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkHadoopWriter: Start to commit write Job job_20251010182443794383710575386220_0016.
+[2025-10-10T18:24:43.826+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkHadoopWriter: Write Job job_20251010182443794383710575386220_0016 committed. Elapsed time: 90 ms.
+[2025-10-10T18:24:43.826+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2025-10-10T18:24:43.840+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkUI: Stopped Spark web UI at http://4134658fdba5:4040
+[2025-10-10T18:24:43.896+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2025-10-10T18:24:43.960+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO MemoryStore: MemoryStore cleared
+[2025-10-10T18:24:43.961+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO BlockManager: BlockManager stopped
+[2025-10-10T18:24:43.973+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2025-10-10T18:24:43.981+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2025-10-10T18:24:43.993+0000] {docker.py:66} INFO - 25/10/10 18:24:43 INFO SparkContext: Successfully stopped SparkContext
+[2025-10-10T18:24:44.742+0000] {docker.py:66} INFO - 25/10/10 18:24:44 INFO ShutdownHookManager: Shutdown hook called
+[2025-10-10T18:24:44.743+0000] {docker.py:66} INFO - 25/10/10 18:24:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-b893fb5a-3839-42b0-bf35-077d241ba316/pyspark-6ccca8e2-3553-4c81-bfb9-4edd35e92709
+[2025-10-10T18:24:44.744+0000] {docker.py:66} INFO - 25/10/10 18:24:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-b893fb5a-3839-42b0-bf35-077d241ba316
+[2025-10-10T18:24:44.745+0000] {docker.py:66} INFO - 25/10/10 18:24:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-3bf71de1-80dd-4537-874a-66ffd665fb98
+[2025-10-10T18:24:44.883+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-10-10T18:24:44.884+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=spark_wordcount_in_docker, task_id=spark_wordcount, run_id=scheduled__2025-10-09T00:00:00+00:00, execution_date=20251009T000000, start_date=20251010T182421, end_date=20251010T182444
+[2025-10-10T18:24:44.924+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-10-10T18:24:44.936+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-10-10T18:24:44.937+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
