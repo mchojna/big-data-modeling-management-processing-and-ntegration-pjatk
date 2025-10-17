@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "id": "4972a851-a2ec-449a-97e0-d56ed0152437",
+      "kwargs": {
+        "min_value": 1
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    },
+    {
+      "id": "695dbcbe-4998-4751-8324-cd0d5cb5cdae",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "4c079b06-8bb9-4d7f-99b3-6de2f00267d6",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "d369d5c0-80bc-472e-a31e-fd16782fcfb6",
+      "kwargs": {
+        "column": "country"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "07a92da4-6dd7-4bc2-ab6e-c3bcc02a00b4",
+      "kwargs": {
+        "column": "country",
+        "value_set": [
+          "PL",
+          "DE",
+          "US",
+          "FR"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "d9e8f833-23ef-4e5d-b5e6-b244a54f92b6",
+      "kwargs": {
+        "column": "amount"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "d729f060-3029-4eb4-96ab-5c67cdb3616d",
+      "kwargs": {
+        "column": "amount",
+        "max_value": 100000.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "f2273579-6c1c-454d-b6e9-b41e594d19d1",
+      "kwargs": {
+        "column": "order_date",
+        "strftime_format": "%Y-%m-%d"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_match_strftime_format"
+    }
+  ],
+  "id": "da7917b4-918f-43fa-913f-e6ee0a362e0f",
+  "meta": {
+    "great_expectations_version": "1.7.1"
+  },
+  "name": "orders_suite_20251017_162606",
+  "notes": null
+}

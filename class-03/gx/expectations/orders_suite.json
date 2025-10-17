@@ -1,0 +1,56 @@
+{
+  "expectations": [
+    {
+      "id": "a46522e5-8916-4ea4-bf26-523ba88f0d68",
+      "kwargs": {
+        "min_value": 1
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    },
+    {
+      "id": "7fa8ec4e-f9b8-4b07-a120-481ae78a759c",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_to_exist"
+    },
+    {
+      "id": "96a03d57-1201-4e9b-9c2d-b61f1a28166b",
+      "kwargs": {
+        "column": "order_id"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "3a61a287-e689-4696-b318-d77afda8c360",
+      "kwargs": {
+        "column": "customer_id"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "288ba666-4da7-43c2-8dab-464db8a098e0",
+      "kwargs": {
+        "column": "amount",
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "612c3877-e653-41fd-bfdc-7fff7d985f65",
+  "meta": {
+    "great_expectations_version": "1.7.1"
+  },
+  "name": "orders_suite",
+  "notes": null
+}

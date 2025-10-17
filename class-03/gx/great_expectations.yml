@@ -1,0 +1,78 @@
+config_version: 4.0
+config_variables_file_path: uncommitted/config_variables.yml
+plugins_directory: plugins/
+stores:
+  expectations_store:
+    class_name: ExpectationsStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: expectations/
+  validation_results_store:
+    class_name: ValidationResultsStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: uncommitted/validations/
+  checkpoint_store:
+    class_name: CheckpointStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      suppress_store_backend_id: true
+      base_directory: checkpoints/
+  validation_definition_store:
+    class_name: ValidationDefinitionStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: validation_definitions/
+expectations_store_name: expectations_store
+validation_results_store_name: validation_results_store
+checkpoint_store_name: checkpoint_store
+data_docs_sites:
+  local_site:
+    class_name: SiteBuilder
+    show_how_to_buttons: true
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: uncommitted/data_docs/local_site
+    site_index_builder:
+      class_name: DefaultSiteIndexBuilder
+analytics_enabled:
+data_context_id: f0bbfb2d-b0ce-40f2-9a02-4561c807f566
+fluent_datasources:
+  local_fs:
+    type: pandas_filesystem
+    id: bcb64365-b155-42c9-af28-d14327e43ca3
+    assets:
+      orders_asset_20251017_162606:
+        type: csv
+        id: b0e91012-b658-4400-b3cc-e99d9f128b1d
+        batch_definitions:
+          orders_file_20251017_162606:
+            id: ed3b9ed2-54cd-497c-ad52-6b4bdcf7f185
+            partitioner:
+              regex: data/orders.csv$
+              param_names: []
+      orders_asset_20251017_162709:
+        type: csv
+        id: f969bbf4-0dd6-4558-a5d1-a70ea9a1591f
+        batch_definitions:
+          orders_file_20251017_162709:
+            id: 31b8b0ce-f6b0-4059-ac32-cdd32a5a884b
+            partitioner:
+              regex: data/orders.csv$
+              param_names: []
+    base_directory: 
+      /Users/mchojna/Documents/Repozytoria/big-data-modeling-management-processing-and-ntegration-pjatk/class-03
+  local_files:
+    type: pandas_filesystem
+    id: 82bbc06d-3f9b-48ae-b664-c8c82b7ffcc2
+    assets:
+      orders_csv:
+        type: csv
+        id: 4e6fd565-9272-4e86-8c1d-cf3a938532bd
+        batch_definitions:
+          orders_file:
+            id: ffa6d6bc-cbd1-4c4f-a720-5dfc5683f901
+            partitioner:
+              regex: data/orders.csv$
+              param_names: []
+    base_directory: .
