@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/mchojna/Documents/Repozytoria/big-data-modeling-management-processing-and-ntegration-pjatk/class-04/mlflow-linear-regression/mlruns/110026986112486823/e2ba9835f6514299a9694800c83d9296/artifacts
+end_time: 1761319372171
+entry_point_name: ''
+experiment_id: '110026986112486823'
+lifecycle_stage: active
+run_id: e2ba9835f6514299a9694800c83d9296
+run_name: languid-mole-451
+run_uuid: e2ba9835f6514299a9694800c83d9296
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761319370209
+status: 3
+tags: []
+user_id: mchojna

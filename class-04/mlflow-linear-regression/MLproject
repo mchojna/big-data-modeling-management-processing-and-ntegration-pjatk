@@ -1,0 +1,11 @@
+# MLproject
+name: ridge-diabetes
+conda_env: conda.yaml
+entry_points:
+  main:
+    parameters:
+      alpha: {type: float, default: 1.0}
+      test_size: {type: float, default: 0.2}
+      random_state: {type: int, default: 42}
+    command: >
+      python train.py --alpha {alpha} --test_size {test_size} --random_state {random_state}

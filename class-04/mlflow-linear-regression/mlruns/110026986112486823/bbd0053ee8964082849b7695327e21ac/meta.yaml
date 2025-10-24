@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/mchojna/Documents/Repozytoria/big-data-modeling-management-processing-and-ntegration-pjatk/class-04/mlflow-linear-regression/mlruns/110026986112486823/bbd0053ee8964082849b7695327e21ac/artifacts
+end_time: 1761319208481
+entry_point_name: ''
+experiment_id: '110026986112486823'
+lifecycle_stage: active
+run_id: bbd0053ee8964082849b7695327e21ac
+run_name: victorious-fawn-990
+run_uuid: bbd0053ee8964082849b7695327e21ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761319205155
+status: 3
+tags: []
+user_id: mchojna

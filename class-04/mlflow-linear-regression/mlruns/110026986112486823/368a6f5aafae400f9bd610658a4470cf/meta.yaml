@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/mchojna/Documents/Repozytoria/big-data-modeling-management-processing-and-ntegration-pjatk/class-04/mlflow-linear-regression/mlruns/110026986112486823/368a6f5aafae400f9bd610658a4470cf/artifacts
+end_time: 1761319389221
+entry_point_name: ''
+experiment_id: '110026986112486823'
+lifecycle_stage: active
+run_id: 368a6f5aafae400f9bd610658a4470cf
+run_name: delicate-bat-805
+run_uuid: 368a6f5aafae400f9bd610658a4470cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761319387341
+status: 3
+tags: []
+user_id: mchojna

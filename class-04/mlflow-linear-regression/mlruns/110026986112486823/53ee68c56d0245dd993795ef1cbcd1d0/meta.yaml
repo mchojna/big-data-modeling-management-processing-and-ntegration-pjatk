@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/mchojna/Documents/Repozytoria/big-data-modeling-management-processing-and-ntegration-pjatk/class-04/mlflow-linear-regression/mlruns/110026986112486823/53ee68c56d0245dd993795ef1cbcd1d0/artifacts
+end_time: 1761319353626
+entry_point_name: ''
+experiment_id: '110026986112486823'
+lifecycle_stage: active
+run_id: 53ee68c56d0245dd993795ef1cbcd1d0
+run_name: crawling-owl-279
+run_uuid: 53ee68c56d0245dd993795ef1cbcd1d0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761319351680
+status: 3
+tags: []
+user_id: mchojna
