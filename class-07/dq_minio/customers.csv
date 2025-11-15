@@ -1,0 +1,7 @@
+customer_id,full_name,email,country,age,created_at
+1001,Ada Lovelace,ada@example.com,PL,36,2025-10-29
+1002,Alan Turing,aturing@example.com,DE,41,2025-10-30
+1003,Grace Hopper,grace.hopper@example.com,FR,55,2025-11-01
+1004,Barbara Liskov,,PL,60,2025-11-02
+1005,Linus Torvalds,linus@example,US,17,2025-11-03
+1005,Duplicate Person,dup@example.com,PL,30,2025-11-04
